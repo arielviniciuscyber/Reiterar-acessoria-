@@ -25,10 +25,12 @@ export default function Login() {
   function handleSubmit(e) {
     e.preventDefault()
     console.log({ email, senha })
+    // TODO: chamar a API de autenticação aqui
   }
 
   return (
     <div className="relative flex min-h-screen overflow-hidden bg-[#060608] font-sans">
+      {/* Lado esquerdo */}
       <div className="relative z-10 w-full px-6 pt-16 lg:w-1/2 lg:pl-[11%] lg:pt-[90px]">
         <h1 className="mb-[70px] w-full max-w-[352px] bg-[#060608]">
           <img
@@ -70,12 +72,11 @@ export default function Login() {
             Entrar
           </button>
 
-          <a href="#" className="mt-9 self-center text-[17px] text-white underline">
-            Ainda não tenho uma conta
-          </a>
+          
         </form>
       </div>
 
+      {/* Lado direito (imagem) */}
       <div
         className="absolute inset-y-0 right-0 hidden w-[52%] bg-cover bg-center lg:block"
         style={{ backgroundImage: `url(${BG_IMAGE})` }}
@@ -83,8 +84,9 @@ export default function Login() {
         <div className="absolute inset-0 bg-linear-to-r from-[#060608] via-[#060608]/60 via-25% to-transparent to-60%" />
       </div>
 
+      {/* Rodapé */}
       <footer className="absolute inset-x-0 bottom-3.5 z-10 text-center text-base text-white">
-        2026 | Reiterar 
+        2026 | Desenvolvido para BKO Claro
       </footer>
     </div>
   )
